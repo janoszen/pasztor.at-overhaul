@@ -1,0 +1,19 @@
+@import "variables";
+@import "shadow";
+
+header[rel="main"] {
+  height:$header-height;
+  @include elevation(2);
+  h1, nav, aside {
+    display: inline-block;
+    height: $header-height;
+  }
+}
+
+nav[rel="main"] {
+  ul, li, a {
+    display: inline-block;
+    height: $header-height;
+    line-height: $header-height;
+  }
+}

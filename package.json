@@ -1,0 +1,6 @@
+{
+  "name": "janoszen/pasztor.at",
+  "dependencies": {
+    "sass": "^1.26.2"
+  }
+}
