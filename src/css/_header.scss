@@ -2,18 +2,75 @@
 @import "shadow";
 
 header[rel="main"] {
+  animation: fadein $animation-length-slow;
   height:$header-height;
+  display:flex;
   @include elevation(2);
   h1, nav, aside {
     display: inline-block;
     height: $header-height;
+    line-height: $header-height;
+    vertical-align: middle;
+    a {
+      color:#000000;
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-weight: $font-weight-headline;
+    font-size:$base-size * 6;
+    margin-left:$base-size * 7;
+    margin-right:$base-size * 7;
+    line-height: $header-height * 0.9;
+  }
+  nav {
+    flex:1;
+    ul, li, a {
+      display: inline-block;
+      height: $header-height;
+      line-height: $header-height * 0.9;
+      font-size:$base-size * 4;
+      font-weight: 600;
+    }
+
+    a {
+      padding-left:$base-size * 2.5;
+      padding-right:$base-size * 2.5;
+      color: inherit;
+      transition: color ease-in-out $animation-length;
+    }
+
+    li.active a {
+      color: $color-hover;
+    }
+    li:hover a {
+      color: $color-hover;
+    }
+  }
+
+  aside {
+    margin-right:$base-size * 6;
+  }
+
+  button {
+    text-transform: uppercase;
+    font-weight: 800;
+    display:inline;
+    cursor: pointer;
+  }
+
+  button[rel="search"] {
+    position:relative;
+    top:$base-size * 1.5;
+    margin-right:$base-size * 4;
+    width:$base-size * 5;
+    height:$base-size * 5;
+    background: url("../icons/magnifier.svg") no-repeat;
+    background-size: contain;
+    span {
+      display:none;
+    }
   }
 }
 
-nav[rel="main"] {
-  ul, li, a {
-    display: inline-block;
-    height: $header-height;
-    line-height: $header-height;
-  }
-}

@@ -1,0 +1,86 @@
+@import "variables";
+
+.hero {
+  background:#1b1819;
+  height: 37.5vw;
+  color: #ffffff;
+  font-family: $font-family-sans;
+  &__contents {
+    background: #1b1819 url("../img/janos-1.jpg") no-repeat;
+    height: 37.5vw;
+    background-size: contain;
+    animation-delay: $animation-length-slow;
+    animation: fadein $animation-length-slow;
+  }
+  &__title {
+    padding-top:5vw;
+    margin-left:5vw;
+    line-height:5vw;
+    font-size: 4.5vw;
+    font-weight: $font-weight-headline - 100;
+  }
+  &__subtitle {
+    margin-top:1vw;
+    font-size:1.5vw;
+    margin-left:5vw;
+    font-weight: $font-weight-normal;
+  }
+  &__contact {
+    padding-left:5vw;
+    padding-top:5vw;
+    h2, li span {
+      display: none;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      display:inline-block;
+      height:3vw;
+      width:3vw;
+      margin-right:($pixel * 75);
+      background-position: center center;
+      background-repeat:no-repeat;
+      background-size: 95%;
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 250ms ease-in-out;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    a[rel="youtube"] {
+      background-image:url("../img/youtube-white.svg")
+    }
+    a[rel="twitter"] {
+      background-image:url("../img/twitter-white.svg")
+    }
+    a[rel="linkedin"] {
+      background-image:url("../img/linkedin-white.svg")
+    }
+    a[rel="github"] {
+      background-image:url("../img/github-white.svg")
+    }
+    a[rel="facebook"] {
+      background-image:url("../img/facebook-white.svg")
+    }
+    a[type="application/rss+xml"] {
+      background-image:url("../img/rss-white.svg")
+    }
+  }
+
+  &__getintouch {
+    margin-left:5vw;
+    padding-top: 3vw;
+    background-image: url("../img/arrow.svg");
+    background-size: auto 4vw;
+    background-repeat: no-repeat;
+    background-position: 13vw 4vw;
+    padding-bottom: 3vw;
+    .btn {
+      font-weight: 600;
+    }
+  }
+}
