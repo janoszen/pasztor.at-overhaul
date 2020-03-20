@@ -1,6 +1,6 @@
 {
-  "name": "janoszen/pasztor.at",
+  "name": "janoszen-pasztor.at",
   "dependencies": {
-    "sass": "^1.26.2"
+    "sass": "^1.26.3"
   }
 }

@@ -1,4 +1,5 @@
-dist
+*.css
+*.map
 node_modules
 .idea
 *.iml
