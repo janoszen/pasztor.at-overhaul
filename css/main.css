@@ -73,14 +73,17 @@ body {
 }
 header[rel=main] {
   animation: fadein 677ms;
-  height: 4.68747vw;
+  height: 50px;
   display: flex;
+  z-index: 2;
   box-shadow: 0 0.0937494vw 0.1874988vw rgba(0, 0, 0, 0.16), 0 0.156249vw 0.312498vw rgba(0, 0, 0, 0.23);
 }
+@media screen and (min-width: 1090px) {
+  header[rel=main] {
+    height: 4.68747vw;
+  }
+}
 header[rel=main] h1, header[rel=main] nav, header[rel=main] aside {
-  display: inline-block;
-  height: 4.68747vw;
-  line-height: 4.68747vw;
   vertical-align: middle;
 }
 header[rel=main] h1 a, header[rel=main] nav a, header[rel=main] aside a {
@@ -88,25 +91,101 @@ header[rel=main] h1 a, header[rel=main] nav a, header[rel=main] aside a {
   text-decoration: none;
 }
 header[rel=main] h1 {
-  font-weight: 800;
-  font-size: 1.874988vw;
-  margin-left: 2.187486vw;
-  margin-right: 2.187486vw;
-  line-height: 4.218723vw;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
 }
-header[rel=main] nav {
+@media screen and (min-width: 1090px) {
+  header[rel=main] h1, header[rel=main] nav, header[rel=main] aside {
+    display: inline-block;
+    height: 4.68747vw;
+    line-height: 4.68747vw;
+  }
+}
+header[rel=main] h1 {
+  font-weight: 800;
+  margin-left: 22px;
+  margin-right: 22px;
+  font-size: 20px;
+  line-height: 45px;
   flex: 1;
 }
+@media screen and (min-width: 1090px) {
+  header[rel=main] h1 {
+    flex: inherit;
+    line-height: 4.218723vw;
+    font-size: 1.874988vw;
+    margin-left: 2.187486vw;
+    margin-right: 2.187486vw;
+  }
+}
+header[rel=main] .mobile {
+  background: #ffffff;
+  z-index: 1;
+  position: absolute;
+  transition: height 233ms ease-in-out;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+}
+header[rel=main] .toaster__checkbox {
+  display: none;
+}
+header[rel=main] .toaster__checkbox:checked + .mobile {
+  height: 245px;
+}
+header[rel=main] .toaster__hamburger {
+  width: 50px;
+  background: url("../img/hamburger.svg") no-repeat center;
+  background-size: 50%;
+}
+@media screen and (min-width: 1090px) {
+  header[rel=main] .toaster__hamburger {
+    display: none;
+  }
+  header[rel=main] .mobile {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: auto;
+    flex: 1;
+    display: flex;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1090px) {
+  header[rel=main] nav {
+    flex: 1;
+  }
+  header[rel=main] nav ul, header[rel=main] nav li, header[rel=main] nav a {
+    height: 4.68747vw;
+    line-height: 4.218723vw;
+    text-align: left;
+  }
+  header[rel=main] nav a {
+    padding-left: 0.781245vw;
+    padding-right: 0.781245vw;
+  }
+}
 header[rel=main] nav ul, header[rel=main] nav li, header[rel=main] nav a {
-  display: inline-block;
-  height: 4.68747vw;
-  line-height: 4.218723vw;
-  font-size: 1.249992vw;
+  text-align: center;
+  display: block;
+  font-size: 16px;
   font-weight: 600;
 }
+@media screen and (min-width: 1090px) {
+  header[rel=main] nav ul, header[rel=main] nav li, header[rel=main] nav a {
+    display: inline-block;
+    font-size: 1.249992vw;
+  }
+}
+header[rel=main] nav li, header[rel=main] nav a {
+  height: 35px;
+}
 header[rel=main] nav a {
-  padding-left: 0.781245vw;
-  padding-right: 0.781245vw;
   color: inherit;
   transition: color ease-in-out 233ms;
 }
@@ -116,8 +195,10 @@ header[rel=main] nav li.active a {
 header[rel=main] nav li:hover a {
   color: #737891;
 }
-header[rel=main] aside {
-  margin-right: 1.874988vw;
+@media screen and (min-width: 1090px) {
+  header[rel=main] aside {
+    margin-right: 1.874988vw;
+  }
 }
 header[rel=main] button {
   text-transform: uppercase;

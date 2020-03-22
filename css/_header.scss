@@ -8,19 +8,25 @@ header[rel="main"] {
     height: $header-height-desktop;
   }
   display:flex;
+  z-index: 2;
   @include elevation(2);
   h1, nav, aside {
-    display: inline-block;
-    height: $header-height-mobile;
-    line-height: $header-height-mobile;
-    @media screen and (min-width: $mobile-break) {
-      height: $header-height-desktop;
-      line-height: $header-height-desktop;
-    }
     vertical-align: middle;
     a {
       color:#000000;
       text-decoration: none;
+    }
+  }
+  h1 {
+    display: inline-block;
+    height: $header-height-mobile;
+    line-height: $header-height-mobile;
+  }
+  @media screen and (min-width: $mobile-break) {
+    h1, nav, aside {
+      display: inline-block;
+      height: $header-height-desktop;
+      line-height: $header-height-desktop;
     }
   }
 
@@ -30,26 +36,83 @@ header[rel="main"] {
     margin-right:22px;
     font-size: 20px;
     line-height: $header-height-mobile * 0.9;
+    flex:1;
     @media screen and (min-width: $mobile-break) {
+      flex: inherit;
       line-height: $header-height-desktop * 0.9;
       font-size:$base-size * 6;
       margin-left:$base-size * 7;
       margin-right:$base-size * 7;
     }
   }
+
+  .mobile {
+    background:#ffffff;
+    z-index:1;
+    position:absolute;
+    transition: height $animation-length ease-in-out;
+    top:$header-height-mobile;
+    left:0;
+    right: 0;
+    height: 0;
+    overflow:hidden;
+  }
+  .toaster__checkbox {
+    display:none;
+  }
+  .toaster__checkbox:checked + .mobile {
+    height:7*$menu-item-height-mobile;
+  }
+  .toaster__hamburger {
+    width:$header-height-mobile;
+    background:url("../img/hamburger.svg") no-repeat center;
+    background-size:50%;
+  }
+
+  @media screen and (min-width: $mobile-break) {
+    .toaster__hamburger {
+      display: none;
+    }
+    .mobile {
+      position:static;
+      top:auto;
+      left:auto;
+      right:auto;
+      z-index: auto;
+      flex:1;
+      display: flex;
+      height:auto;
+    }
+  }
+
   nav {
-    flex:1;
+    @media screen and (min-width: $mobile-break) {
+      flex:1;
+      ul, li, a {
+        height: $header-height-desktop;
+        line-height: $header-height-desktop * 0.9;
+        text-align:left;
+      }
+      a {
+        padding-left: $base-size * 2.5;
+        padding-right: $base-size * 2.5;
+      }
+    }
     ul, li, a {
-      display: inline-block;
-      height: $header-height-desktop;
-      line-height: $header-height-desktop * 0.9;
-      font-size:$base-size * 4;
+      @media screen and (min-width: $mobile-break) {
+        display: inline-block;
+        font-size:$base-size * 4;
+      }
+      text-align: center;
+      display:block;
+      font-size:16px;
       font-weight: 600;
+    }
+    li, a {
+      height:$menu-item-height-mobile;
     }
 
     a {
-      padding-left:$base-size * 2.5;
-      padding-right:$base-size * 2.5;
       color: inherit;
       transition: color ease-in-out $animation-length;
     }
@@ -62,8 +125,10 @@ header[rel="main"] {
     }
   }
 
-  aside {
-    margin-right:$base-size * 6;
+  @media screen and (min-width: $mobile-break) {
+    aside {
+      margin-right: $base-size * 6;
+    }
   }
 
   button {
