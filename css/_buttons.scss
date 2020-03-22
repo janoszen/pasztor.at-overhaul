@@ -15,9 +15,16 @@
     background-color:$color-hover;
   }
   &-lg {
-    height: $base-size * 10;
-    line-height: $base-size * 10;
-    border-radius:$base-size * 5;
-    font-size:$base-size * 4;
+    height: 5vw;
+    line-height: 5vw;
+    border-radius: 2.5vw;
+    font-size: 2.5vw;
+
+    @media screen and (min-width: $mobile-break) {
+      height: $base-size * 10;
+      line-height: $base-size * 10;
+      border-radius:$base-size * 5;
+      font-size:$base-size * 4;
+    }
   }
 }

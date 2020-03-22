@@ -6,28 +6,67 @@
   color: #ffffff;
   font-family: $font-family-sans;
   &__contents {
+    opacity:0;
     background: #1b1819 url("../img/janos-1.jpg") no-repeat;
     height: 37.5vw;
     background-size: contain;
-    animation-delay: $animation-length-slow;
     animation: fadein $animation-length-slow;
+    animation-fill-mode: forwards;
+    border-bottom: 10vw solid #333333;
+    @media screen and (min-width: $mobile-break) {
+      border-bottom-width: 0;
+    }
   }
   &__title {
-    padding-top:5vw;
-    margin-left:5vw;
-    line-height:5vw;
-    font-size: 4.5vw;
     font-weight: $font-weight-headline - 100;
+    padding-top:2vw;
+    margin-left:5vw;
+    line-height:9vw;
+    font-size: 8vw;
+    @media screen and (min-width: $mobile-break) {
+      padding-top:5vw;
+      margin-left:5vw;
+      line-height:5vw;
+      font-size: 4.5vw;
+    }
   }
   &__subtitle {
-    margin-top:1vw;
-    font-size:1.5vw;
+    margin-top:8vw;
+    font-size:3.5vw;
+    line-height:4vw;
     margin-left:5vw;
     font-weight: $font-weight-normal;
+    .hero__line {
+      display:block;
+      @media screen and (min-width: $mobile-break) {
+        display:inline;
+      }
+    }
+    @media screen and (min-width: $mobile-break) {
+      margin-top: 1vw;
+      font-size: 1.5vw;
+      line-height:1.5vw;
+      margin-left: 5vw;
+    }
+  }
+  &__elsewhere {
+    display: flex;
+    flex-direction: row;
+    padding-top:4vw;
+    @media screen and (min-width: $mobile-break) {
+      display:block;
+      padding-top:0;
+    }
   }
   &__contact {
+    display:inline-block;
+    @media screen and (min-width: $mobile-break) {
+      display:block;
+    }
     padding-left:5vw;
-    padding-top:5vw;
+    @media screen and (min-width: $mobile-break) {
+      padding-top: 5vw;
+    }
     h2, li span {
       display: none;
     }
@@ -38,8 +77,12 @@
 
     a {
       display:inline-block;
-      height:3vw;
-      width:3vw;
+      height:5vw;
+      width:5vw;
+      @media screen and (min-width: $mobile-break) {
+        height: 3vw;
+        width: 3vw;
+      }
       margin-right:($pixel * 75);
       background-position: center center;
       background-repeat:no-repeat;
@@ -72,13 +115,15 @@
   }
 
   &__getintouch {
+    @media screen and (min-width: $mobile-break){
+      padding-top: 3vw;
+      padding-bottom: 3vw;
+    }
     margin-left:5vw;
-    padding-top: 3vw;
     background-image: url("../img/arrow.svg");
     background-size: auto 4vw;
     background-repeat: no-repeat;
     background-position: 13vw 4vw;
-    padding-bottom: 3vw;
     .btn {
       font-weight: 600;
     }

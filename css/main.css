@@ -72,7 +72,9 @@ body {
   }
 }
 header[rel=main] {
+  opacity: 0;
   animation: fadein 677ms;
+  animation-fill-mode: forwards;
   height: 50px;
   display: flex;
   z-index: 2;
@@ -265,10 +267,18 @@ header[rel=main] form input[type=submit] {
   background-color: #737891;
 }
 .btn-lg {
-  height: 3.12498vw;
-  line-height: 3.12498vw;
-  border-radius: 1.56249vw;
-  font-size: 1.249992vw;
+  height: 5vw;
+  line-height: 5vw;
+  border-radius: 2.5vw;
+  font-size: 2.5vw;
+}
+@media screen and (min-width: 1090px) {
+  .btn-lg {
+    height: 3.12498vw;
+    line-height: 3.12498vw;
+    border-radius: 1.56249vw;
+    font-size: 1.249992vw;
+  }
 }
 
 .hero {
@@ -278,28 +288,81 @@ header[rel=main] form input[type=submit] {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .hero__contents {
+  opacity: 0;
   background: #1b1819 url("../img/janos-1.jpg") no-repeat;
   height: 37.5vw;
   background-size: contain;
-  animation-delay: 677ms;
   animation: fadein 677ms;
+  animation-fill-mode: forwards;
+  border-bottom: 10vw solid #333333;
+}
+@media screen and (min-width: 1090px) {
+  .hero__contents {
+    border-bottom-width: 0;
+  }
 }
 .hero__title {
-  padding-top: 5vw;
-  margin-left: 5vw;
-  line-height: 5vw;
-  font-size: 4.5vw;
   font-weight: 700;
+  padding-top: 2vw;
+  margin-left: 5vw;
+  line-height: 9vw;
+  font-size: 8vw;
+}
+@media screen and (min-width: 1090px) {
+  .hero__title {
+    padding-top: 5vw;
+    margin-left: 5vw;
+    line-height: 5vw;
+    font-size: 4.5vw;
+  }
 }
 .hero__subtitle {
-  margin-top: 1vw;
-  font-size: 1.5vw;
+  margin-top: 8vw;
+  font-size: 3.5vw;
+  line-height: 4vw;
   margin-left: 5vw;
   font-weight: normal;
 }
+.hero__subtitle .hero__line {
+  display: block;
+}
+@media screen and (min-width: 1090px) {
+  .hero__subtitle .hero__line {
+    display: inline;
+  }
+}
+@media screen and (min-width: 1090px) {
+  .hero__subtitle {
+    margin-top: 1vw;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    margin-left: 5vw;
+  }
+}
+.hero__elsewhere {
+  display: flex;
+  flex-direction: row;
+  padding-top: 4vw;
+}
+@media screen and (min-width: 1090px) {
+  .hero__elsewhere {
+    display: block;
+    padding-top: 0;
+  }
+}
 .hero__contact {
+  display: inline-block;
   padding-left: 5vw;
-  padding-top: 5vw;
+}
+@media screen and (min-width: 1090px) {
+  .hero__contact {
+    display: block;
+  }
+}
+@media screen and (min-width: 1090px) {
+  .hero__contact {
+    padding-top: 5vw;
+  }
 }
 .hero__contact h2, .hero__contact li span {
   display: none;
@@ -309,8 +372,8 @@ header[rel=main] form input[type=submit] {
 }
 .hero__contact a {
   display: inline-block;
-  height: 3vw;
-  width: 3vw;
+  height: 5vw;
+  width: 5vw;
   margin-right: 3.906225vw;
   background-position: center center;
   background-repeat: no-repeat;
@@ -318,6 +381,12 @@ header[rel=main] form input[type=submit] {
   text-decoration: none;
   opacity: 0.9;
   transition: opacity 250ms ease-in-out;
+}
+@media screen and (min-width: 1090px) {
+  .hero__contact a {
+    height: 3vw;
+    width: 3vw;
+  }
 }
 .hero__contact a:hover {
   opacity: 1;
@@ -342,12 +411,16 @@ header[rel=main] form input[type=submit] {
 }
 .hero__getintouch {
   margin-left: 5vw;
-  padding-top: 3vw;
   background-image: url("../img/arrow.svg");
   background-size: auto 4vw;
   background-repeat: no-repeat;
   background-position: 13vw 4vw;
-  padding-bottom: 3vw;
+}
+@media screen and (min-width: 1090px) {
+  .hero__getintouch {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+  }
 }
 .hero__getintouch .btn {
   font-weight: 600;

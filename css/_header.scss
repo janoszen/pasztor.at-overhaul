@@ -2,7 +2,9 @@
 @import "shadow";
 
 header[rel="main"] {
+  opacity: 0;
   animation: fadein $animation-length-slow;
+  animation-fill-mode: forwards;
   height: $header-height-mobile;
   @media screen and (min-width: $mobile-break) {
     height: $header-height-desktop;
