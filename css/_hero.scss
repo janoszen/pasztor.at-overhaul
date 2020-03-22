@@ -5,6 +5,10 @@
   height: 37.5vw;
   color: #ffffff;
   font-family: $font-family-sans;
+  margin-top: $header-height-mobile;
+  @media screen and (min-width: $mobile-break){
+    margin-top: 0;
+  }
   &__contents {
     opacity:0;
     background: #1b1819 url("../img/janos-1.jpg") no-repeat;
@@ -12,7 +16,7 @@
     background-size: contain;
     animation: fadein $animation-length-slow;
     animation-fill-mode: forwards;
-    border-bottom: 10vw solid #333333;
+    border-bottom: 13vw solid #333333;
     @media screen and (min-width: $mobile-break) {
       border-bottom-width: 0;
     }
@@ -77,8 +81,8 @@
 
     a {
       display:inline-block;
-      height:5vw;
-      width:5vw;
+      height:8vw;
+      width:8vw;
       @media screen and (min-width: $mobile-break) {
         height: 3vw;
         width: 3vw;
@@ -118,14 +122,28 @@
     @media screen and (min-width: $mobile-break){
       padding-top: 3vw;
       padding-bottom: 3vw;
+      background-image: url("../img/arrow.svg");
+      margin-left:5vw;
     }
-    margin-left:5vw;
-    background-image: url("../img/arrow.svg");
     background-size: auto 4vw;
     background-repeat: no-repeat;
     background-position: 13vw 4vw;
     .btn {
+      height:8vw;
+      border-radius: 4vw;
+      padding-left:4vw;
+      line-height:8vw;
+      padding-right:4vw;
+      font-size: 3vw;
       font-weight: 600;
+      @media screen and (min-width: $mobile-break){
+        height: $base-size * 10;
+        line-height: $base-size * 10;
+        border-radius:$base-size * 5;
+        font-size:$base-size * 4;
+        padding-left: $base-size * 6;
+        padding-right: $base-size * 6;
+      }
     }
   }
 }

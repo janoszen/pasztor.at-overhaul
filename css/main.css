@@ -76,6 +76,10 @@ header[rel=main] {
   animation: fadein 677ms;
   animation-fill-mode: forwards;
   height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   z-index: 2;
   box-shadow: 0 0.0937494vw 0.1874988vw rgba(0, 0, 0, 0.16), 0 0.156249vw 0.312498vw rgba(0, 0, 0, 0.23);
@@ -83,6 +87,10 @@ header[rel=main] {
 @media screen and (min-width: 1090px) {
   header[rel=main] {
     height: 4.68747vw;
+    position: static;
+    top: inherit;
+    left: inherit;
+    right: inherit;
   }
 }
 header[rel=main] h1, header[rel=main] nav, header[rel=main] aside {
@@ -131,17 +139,23 @@ header[rel=main] .mobile {
   right: 0;
   height: 0;
   overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 header[rel=main] .toaster__checkbox {
   display: none;
 }
 header[rel=main] .toaster__checkbox:checked + .mobile {
-  height: 245px;
+  height: 315px;
 }
 header[rel=main] .toaster__hamburger {
   width: 50px;
   background: url("../img/hamburger.svg") no-repeat center;
   background-size: 50%;
+  cursor: pointer;
+}
+header[rel=main] .toaster__hamburger span {
+  display: none;
 }
 @media screen and (min-width: 1090px) {
   header[rel=main] .toaster__hamburger {
@@ -156,6 +170,7 @@ header[rel=main] .toaster__hamburger {
     flex: 1;
     display: flex;
     height: auto;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1090px) {
@@ -182,10 +197,12 @@ header[rel=main] nav ul, header[rel=main] nav li, header[rel=main] nav a {
   }
 }
 header[rel=main] nav li, header[rel=main] nav a {
+  line-height: 35px;
   height: 35px;
 }
 @media screen and (min-width: 1090px) {
   header[rel=main] nav li, header[rel=main] nav a {
+    line-height: 4.68747vw;
     height: 4.68747vw;
   }
 }
@@ -200,68 +217,117 @@ header[rel=main] nav li:hover a {
   color: #737891;
 }
 header[rel=main] aside {
-  flex: 1;
-  display: flex;
+  text-align: center;
 }
 @media screen and (min-width: 1090px) {
   header[rel=main] aside {
+    flex: 1;
+    text-align: left;
+    display: flex;
     margin-right: 1.874988vw;
   }
-}
-header[rel=main] .btn[rel=subscribe] {
-  text-transform: uppercase;
-  font-weight: 800;
-  display: inline;
-  cursor: pointer;
-  position: relative;
-  top: 0.937494vw;
 }
 header[rel=main] form {
   position: relative;
   height: 100%;
-  flex: 1;
+  width: 100%;
   display: block;
+}
+@media screen and (min-width: 1090px) {
+  header[rel=main] form {
+    width: auto;
+    flex: 1;
+  }
 }
 header[rel=main] form label {
   display: none;
 }
 header[rel=main] form input[rel=search] {
-  float: right;
+  box-sizing: border-box;
+  height: 35px;
   display: block;
-  border: 0;
   background: url("../img/magnifier.svg") no-repeat left center;
-  background-size: 0.937494vw 0.937494vw;
-  height: 1.874988vw;
-  margin-top: 1.406241vw;
-  margin-bottom: 1.406241vw;
-  margin-right: 1.249992vw;
-  width: 0;
-  padding-left: 1.874988vw;
-  border-bottom: 1px solid #ffffff;
-  transition: width ease-in-out 233ms, border-bottom-color ease-in-out 233ms;
-  cursor: pointer;
+  background-size: 17.5px 17.5px;
+  width: 100%;
+  padding-left: 35px;
+  border: 0;
+  border-bottom: 1px solid #000000;
+}
+@media screen and (min-width: 1090px) {
+  header[rel=main] form input[rel=search] {
+    float: right;
+    height: 1.874988vw;
+    margin-top: 1.406241vw;
+    margin-bottom: 1.406241vw;
+    margin-right: 1.249992vw;
+    width: 0;
+    transition: width ease-in-out 233ms, border-bottom-color ease-in-out 233ms;
+    cursor: pointer;
+    border-bottom: 1px solid #ffffff;
+    background-size: 0.937494vw 0.937494vw;
+    padding-left: 1.874988vw;
+  }
+  header[rel=main] form input[rel=search]:hover, header[rel=main] form input[rel=search]:focus {
+    width: 15.6249vw;
+    border-bottom: 1px solid #000000;
+    cursor: text;
+  }
 }
 header[rel=main] form input[rel=search]:hover, header[rel=main] form input[rel=search]:focus {
   outline: none;
-  width: 15.6249vw;
-  border-bottom: 1px solid #000000;
-  cursor: text;
 }
 header[rel=main] form input[type=submit] {
   display: none;
+}
+header[rel=main] .btn[rel=subscribe] {
+  margin-top: 17.5px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 17.5px;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 17.5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: inline;
+  cursor: pointer;
+  position: relative;
+}
+@media screen and (min-width: 1090px) {
+  header[rel=main] .btn[rel=subscribe] {
+    margin-top: 0.937494vw;
+    height: 2.499984vw;
+    line-height: 2.499984vw;
+    border-radius: 1.249992vw;
+    padding-left: 1.874988vw;
+    padding-right: 1.874988vw;
+    font-size: 0.937494vw;
+  }
 }
 
 .btn {
   color: #ffffff;
   cursor: pointer;
   background-color: #4e5162;
-  height: 2.499984vw;
-  line-height: 2.499984vw;
-  border-radius: 1.249992vw;
-  padding-left: 1.874988vw;
-  padding-right: 1.874988vw;
-  font-size: 0.937494vw;
+  height: 6vw;
+  line-height: 6vw;
+  border-radius: 3vw;
+  font-size: 3vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
   transition: background-color 233ms ease-in-out;
+}
+@media screen and (min-width: 1090px) {
+  .btn {
+    height: 2.499984vw;
+    line-height: 2.499984vw;
+    border-radius: 1.249992vw;
+    padding-left: 1.874988vw;
+    padding-right: 1.874988vw;
+    font-size: 0.937494vw;
+  }
 }
 .btn:hover {
   background-color: #737891;
@@ -286,6 +352,12 @@ header[rel=main] form input[type=submit] {
   height: 37.5vw;
   color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin-top: 50px;
+}
+@media screen and (min-width: 1090px) {
+  .hero {
+    margin-top: 0;
+  }
 }
 .hero__contents {
   opacity: 0;
@@ -294,7 +366,7 @@ header[rel=main] form input[type=submit] {
   background-size: contain;
   animation: fadein 677ms;
   animation-fill-mode: forwards;
-  border-bottom: 10vw solid #333333;
+  border-bottom: 13vw solid #333333;
 }
 @media screen and (min-width: 1090px) {
   .hero__contents {
@@ -372,8 +444,8 @@ header[rel=main] form input[type=submit] {
 }
 .hero__contact a {
   display: inline-block;
-  height: 5vw;
-  width: 5vw;
+  height: 8vw;
+  width: 8vw;
   margin-right: 3.906225vw;
   background-position: center center;
   background-repeat: no-repeat;
@@ -410,8 +482,6 @@ header[rel=main] form input[type=submit] {
   background-image: url("../img/rss-white.svg");
 }
 .hero__getintouch {
-  margin-left: 5vw;
-  background-image: url("../img/arrow.svg");
   background-size: auto 4vw;
   background-repeat: no-repeat;
   background-position: 13vw 4vw;
@@ -420,10 +490,28 @@ header[rel=main] form input[type=submit] {
   .hero__getintouch {
     padding-top: 3vw;
     padding-bottom: 3vw;
+    background-image: url("../img/arrow.svg");
+    margin-left: 5vw;
   }
 }
 .hero__getintouch .btn {
+  height: 8vw;
+  border-radius: 4vw;
+  padding-left: 4vw;
+  line-height: 8vw;
+  padding-right: 4vw;
+  font-size: 3vw;
   font-weight: 600;
+}
+@media screen and (min-width: 1090px) {
+  .hero__getintouch .btn {
+    height: 3.12498vw;
+    line-height: 3.12498vw;
+    border-radius: 1.56249vw;
+    font-size: 1.249992vw;
+    padding-left: 1.874988vw;
+    padding-right: 1.874988vw;
+  }
 }
 
 .speech {
