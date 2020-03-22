@@ -377,8 +377,8 @@ header[rel=main] .btn[rel=subscribe] {
   font-weight: 700;
   padding-top: 2vw;
   margin-left: 5vw;
-  line-height: 9vw;
-  font-size: 8vw;
+  line-height: 7vw;
+  font-size: 6vw;
 }
 @media screen and (min-width: 1090px) {
   .hero__title {
@@ -390,8 +390,8 @@ header[rel=main] .btn[rel=subscribe] {
 }
 .hero__subtitle {
   margin-top: 8vw;
-  font-size: 3.5vw;
-  line-height: 4vw;
+  font-size: 3vw;
+  line-height: 3.5vw;
   margin-left: 5vw;
   font-weight: normal;
 }
@@ -414,7 +414,7 @@ header[rel=main] .btn[rel=subscribe] {
 .hero__elsewhere {
   display: flex;
   flex-direction: row;
-  padding-top: 4vw;
+  padding-top: 9vw;
 }
 @media screen and (min-width: 1090px) {
   .hero__elsewhere {
