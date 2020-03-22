@@ -414,7 +414,7 @@ header[rel=main] .btn[rel=subscribe] {
 .hero__elsewhere {
   display: flex;
   flex-direction: row;
-  padding-top: 9vw;
+  padding-top: 7.5vw;
 }
 @media screen and (min-width: 1090px) {
   .hero__elsewhere {
