@@ -87,7 +87,6 @@ header[rel="main"] {
 
   nav {
     @media screen and (min-width: $mobile-break) {
-      flex:1;
       ul, li, a {
         height: $header-height-desktop;
         line-height: $header-height-desktop * 0.9;
@@ -110,6 +109,9 @@ header[rel="main"] {
     }
     li, a {
       height:$menu-item-height-mobile;
+      @media screen and (min-width: $mobile-break) {
+        height: $header-height-desktop;
+      }
     }
 
     a {
@@ -125,28 +127,57 @@ header[rel="main"] {
     }
   }
 
+  aside {
+    flex: 1;
+    display:flex;
+  }
+
   @media screen and (min-width: $mobile-break) {
     aside {
       margin-right: $base-size * 6;
     }
   }
 
-  button {
+  .btn[rel="subscribe"] {
     text-transform: uppercase;
     font-weight: 800;
     display:inline;
     cursor: pointer;
+    position:relative;
+    top:$base-size * 3;
   }
 
-  button[rel="search"] {
+  form {
     position:relative;
-    top:$base-size * 1.5;
-    margin-right:$base-size * 4;
-    width:$base-size * 5;
-    height:$base-size * 5;
-    background: url("../img/magnifier.svg") no-repeat;
-    background-size: contain;
-    span {
+    height: 100%;
+    flex: 1;
+    display:block;
+    label {
+      display: none;
+    }
+    input[rel="search"] {
+      float:right;
+      display: block;
+      border:0;
+      background: url("../img/magnifier.svg") no-repeat left center;
+      background-size: $base-size * 3 $base-size * 3;
+      height:$base-size * 6;
+      margin-top:($header-height-desktop - ($base-size * 6))/2;
+      margin-bottom:($header-height-desktop - ($base-size * 6))/2;
+      margin-right:$base-size * 4;
+      width: 0;
+      padding-left: $base-size * 6;
+      border-bottom:1px solid #ffffff;
+      transition: width ease-in-out $animation-length, border-bottom-color ease-in-out $animation-length;
+      cursor: pointer;
+      &:hover, &:focus {
+        outline: none;
+        width: $base-size * 50;
+        border-bottom: 1px solid #000000;
+        cursor: text;
+      }
+    }
+    input[type="submit"] {
       display:none;
     }
   }

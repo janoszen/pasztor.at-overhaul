@@ -1,0 +1,12 @@
+.speech {
+    display:none;
+    @media speech {
+        display: block;
+    }
+}
+
+.no-speech {
+    @media speech {
+        display:none;
+    }
+}

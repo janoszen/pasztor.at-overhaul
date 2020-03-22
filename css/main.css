@@ -157,9 +157,6 @@ header[rel=main] .toaster__hamburger {
   }
 }
 @media screen and (min-width: 1090px) {
-  header[rel=main] nav {
-    flex: 1;
-  }
   header[rel=main] nav ul, header[rel=main] nav li, header[rel=main] nav a {
     height: 4.68747vw;
     line-height: 4.218723vw;
@@ -185,6 +182,11 @@ header[rel=main] nav ul, header[rel=main] nav li, header[rel=main] nav a {
 header[rel=main] nav li, header[rel=main] nav a {
   height: 35px;
 }
+@media screen and (min-width: 1090px) {
+  header[rel=main] nav li, header[rel=main] nav a {
+    height: 4.68747vw;
+  }
+}
 header[rel=main] nav a {
   color: inherit;
   transition: color ease-in-out 233ms;
@@ -195,27 +197,55 @@ header[rel=main] nav li.active a {
 header[rel=main] nav li:hover a {
   color: #737891;
 }
+header[rel=main] aside {
+  flex: 1;
+  display: flex;
+}
 @media screen and (min-width: 1090px) {
   header[rel=main] aside {
     margin-right: 1.874988vw;
   }
 }
-header[rel=main] button {
+header[rel=main] .btn[rel=subscribe] {
   text-transform: uppercase;
   font-weight: 800;
   display: inline;
   cursor: pointer;
-}
-header[rel=main] button[rel=search] {
   position: relative;
-  top: 0.468747vw;
-  margin-right: 1.249992vw;
-  width: 1.56249vw;
-  height: 1.56249vw;
-  background: url("../img/magnifier.svg") no-repeat;
-  background-size: contain;
+  top: 0.937494vw;
 }
-header[rel=main] button[rel=search] span {
+header[rel=main] form {
+  position: relative;
+  height: 100%;
+  flex: 1;
+  display: block;
+}
+header[rel=main] form label {
+  display: none;
+}
+header[rel=main] form input[rel=search] {
+  float: right;
+  display: block;
+  border: 0;
+  background: url("../img/magnifier.svg") no-repeat left center;
+  background-size: 0.937494vw 0.937494vw;
+  height: 1.874988vw;
+  margin-top: 1.406241vw;
+  margin-bottom: 1.406241vw;
+  margin-right: 1.249992vw;
+  width: 0;
+  padding-left: 1.874988vw;
+  border-bottom: 1px solid #ffffff;
+  transition: width ease-in-out 233ms, border-bottom-color ease-in-out 233ms;
+  cursor: pointer;
+}
+header[rel=main] form input[rel=search]:hover, header[rel=main] form input[rel=search]:focus {
+  outline: none;
+  width: 15.6249vw;
+  border-bottom: 1px solid #000000;
+  cursor: text;
+}
+header[rel=main] form input[type=submit] {
   display: none;
 }
 
@@ -321,6 +351,21 @@ header[rel=main] button[rel=search] span {
 }
 .hero__getintouch .btn {
   font-weight: 600;
+}
+
+.speech {
+  display: none;
+}
+@media speech {
+  .speech {
+    display: block;
+  }
+}
+
+@media speech {
+  .no-speech {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

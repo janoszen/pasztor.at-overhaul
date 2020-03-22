@@ -13,10 +13,14 @@
                 <h1>
                     <a href="/">Janos Pasztor</a>
                 </h1>
-                <label for="mobilemenutoggle" class="toaster__hamburger"></label>
-                <input type="checkbox" id="mobilemenutoggle" class="toaster__checkbox" />
+                <label for="mobilemenutoggle" class="toaster__hamburger no-speech"></label>
+                <input type="checkbox" id="mobilemenutoggle" class="toaster__checkbox no-speech" />
                 <div class="mobile">
                     <nav rel="main">
+                        <h2 class="speech">Main menu</h2>
+                        <div class="speech">
+                            <a href="#after-main-menu">Skip main menu</a>
+                        </div>
                         <ul>
                             <li class="active"><a href="/">Home</a></li>
                             <li><a href="/talks">Talks</a></li>
@@ -27,22 +31,31 @@
                         </ul>
                     </nav>
                     <aside rel="menu">
-                        <button rel="search"><span>Search</span></button>
+                        <form>
+                            <label for="search">Search:</label>
+                            <input type="text" id="search" rel="search"/>
+                            <input type="submit" />
+                        </form>
                         <button rel="subscribe" class="btn"><span>Subscribe</span></button>
                     </aside>
+                    <div id="after-main-menu"></div>
                 </div>
             </header>
             <div class="hero">
                 <div class="hero__contents">
+                    <h2 class="speech">About me</h2>
+                    <div class="speech">
+                        <a href="#after-hero">Skip about me</a>
+                    </div>
                     <div class="hero__title">
                         Public Speaker,<br />
                         Trainer, Author.
                     </div>
-                    <div class="hero__subtitle">
+                    <div class="hero__subtitle no-speech">
                         DevOps Educator with 10+ Years of Experience in the Field
                     </div>
                     <div class="hero__contact">
-                        <h2>Me, elsewhere</h2>
+                        <h3>Me, elsewhere</h3>
                         <ul>
                             <li><a href="https://youtube.com/c/JanosPasztor" rel="youtube"><span>YouTube</span></a></li>
                             <li><a href="https://twitter.com/janoszen" rel="twitter"><span>Twitter</span></a></li>
@@ -59,6 +72,7 @@
                     </div>
                 </div>
             </div>
+            <div id="after-hero"></div>
         </div>
         <script> </script>
     </body>
