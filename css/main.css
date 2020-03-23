@@ -360,6 +360,7 @@ header[rel=main] .btn[rel=subscribe] {
   }
 }
 .hero__contents {
+  position: relative;
   opacity: 0;
   background: #1b1819 url("../img/janos-1.jpg") no-repeat;
   height: 37.5vw;
@@ -412,14 +413,22 @@ header[rel=main] .btn[rel=subscribe] {
   }
 }
 .hero__elsewhere {
+  position: absolute;
+  top: 37.5vw;
+  height: 8vw;
+  padding-top: 2.5vw;
+  padding-bottom: 2.5vw;
   display: flex;
   flex-direction: row;
-  padding-top: 9vw;
 }
 @media screen and (min-width: 1090px) {
   .hero__elsewhere {
+    position: static;
+    top: auto;
+    height: auto;
     display: block;
     padding-top: 0;
+    padding-bottom: 0;
   }
 }
 .hero__contact {
