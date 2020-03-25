@@ -107,6 +107,9 @@
         opacity: 1;
       }
     }
+    a[rel="discord"] {
+      background-image:url("../img/discord-white.svg")
+    }
     a[rel="youtube"] {
       background-image:url("../img/youtube-white.svg")
     }

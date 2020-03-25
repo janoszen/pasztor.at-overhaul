@@ -472,6 +472,9 @@ header[rel=main] .btn[rel=subscribe] {
 .hero__contact a:hover {
   opacity: 1;
 }
+.hero__contact a[rel=discord] {
+  background-image: url("../img/discord-white.svg");
+}
 .hero__contact a[rel=youtube] {
   background-image: url("../img/youtube-white.svg");
 }
