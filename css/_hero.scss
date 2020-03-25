@@ -17,7 +17,7 @@
     background-size: contain;
     animation: fadein $animation-length-slow;
     animation-fill-mode: forwards;
-    border-bottom: 13vw solid #333333;
+    border-bottom: 11vw solid #333333;
     @media screen and (min-width: $mobile-break) {
       border-bottom-width: 0;
     }
@@ -57,7 +57,7 @@
   &__elsewhere {
     position:absolute;
     top: 37.5vw;
-    height: 8vw;
+    height: 6vw;
     padding-top:2.5vw;
     padding-bottom:2.5vw;
     display: flex;
@@ -90,8 +90,8 @@
 
     a {
       display:inline-block;
-      height:8vw;
-      width:8vw;
+      height:6vw;
+      width:6vw;
       @media screen and (min-width: $mobile-break) {
         height: 3vw;
         width: 3vw;
@@ -141,11 +141,11 @@
     background-repeat: no-repeat;
     background-position: 13vw 4vw;
     .btn {
-      height:8vw;
-      border-radius: 4vw;
-      padding-left:4vw;
-      line-height:8vw;
-      padding-right:4vw;
+      height:6vw;
+      border-radius: 3vw;
+      padding-left:3vw;
+      line-height:6vw;
+      padding-right:3vw;
       font-size: 3vw;
       font-weight: 600;
       @media screen and (min-width: $mobile-break){
