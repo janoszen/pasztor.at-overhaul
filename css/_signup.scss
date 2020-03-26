@@ -1,0 +1,58 @@
+@import "variables";
+
+.signup {
+  padding: 7vw 5vw;
+  background:#0CD0A1;
+  h2 {
+    font-size: 4vw;
+    font-weight: $font-weight-headline;
+    margin-bottom:3vw;
+    @media screen and (min-width: $mobile-break){
+      font-size: 3vw;
+    }
+    .signup__line {
+      display: block;
+    }
+  }
+
+  label span {
+    display:none;
+  }
+
+  form {
+    margin-bottom:1.5vw;
+  }
+
+  input[type="text"], input[type="email"] {
+    height: 6vw;
+    line-height:6vw;
+    width:30vw;
+    padding-left:2vw;
+    padding-right:2vw;
+    margin-right:2vw;
+    font-size:2vw;
+
+    background-color:#b6f1e2;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom: 0.2vw solid #0CD0A1;
+    border-left-width: 0;
+    color:#000000;
+
+    &:focus {
+      outline: 0;
+      border-bottom:0.2vw solid $color-active;
+    }
+    &::placeholder {
+      color: #999999;
+    }
+  }
+
+  .disclaimer {
+    font-size:1.7vw;
+  }
+
+  a {
+    color: $color-active;
+  }
+}

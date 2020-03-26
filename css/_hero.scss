@@ -2,11 +2,12 @@
 
 .hero {
   background:#1b1819;
-  height: 37.5vw;
+  height: 48.5vw;
   color: #ffffff;
   font-family: $font-family-sans;
   margin-top: $header-height-mobile;
   @media screen and (min-width: $mobile-break){
+    height: 37.5vw;
     margin-top: 0;
   }
   &__contents {
