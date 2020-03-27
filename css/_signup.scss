@@ -1,7 +1,7 @@
 @import "variables";
 
 .signup {
-  padding: 7vw 5vw;
+  padding: 5vw 5vw;
   background:#0CD0A1;
   h2 {
     font-size: 4vw;
@@ -23,14 +23,22 @@
     margin-bottom:1.5vw;
   }
 
-  input[type="text"], input[type="email"] {
+  input[type="text"], input[type="email"], button[type="submit"] {
     height: 6vw;
     line-height:6vw;
-    width:30vw;
-    padding-left:2vw;
-    padding-right:2vw;
-    margin-right:2vw;
     font-size:2vw;
+
+    @media screen and (min-width: $mobile-break) {
+      height: 4vw;
+      line-height:4vw;
+    }
+  }
+
+  input[type="text"], input[type="email"] {
+    width:30vw;
+    padding-left:1vw;
+    padding-right:1vw;
+    margin-right:2vw;
 
     background-color:#b6f1e2;
     border-top-width: 0;
@@ -38,8 +46,9 @@
     border-bottom: 0.2vw solid #0CD0A1;
     border-left-width: 0;
     color:#000000;
+    transition: border-bottom-color ease-in-out $animation-length;
 
-    &:focus {
+    &:focus, &:hover {
       outline: 0;
       border-bottom:0.2vw solid $color-active;
     }
@@ -48,11 +57,29 @@
     }
   }
 
+  button[type="submit"] {
+    cursor: pointer;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-radius: 3vw;
+    background:$color-active;
+    color:#ffffff;
+    transition: background-color ease-in-out $animation-length;
+    &:hover {
+      background: $color-hover;
+    }
+  }
+
   .disclaimer {
     font-size:1.7vw;
+    line-height:2vw;
   }
 
   a {
     color: $color-active;
+    transition: color ease-in-out $animation-length;
+    &:hover {
+      color:$color-hover;
+    }
   }
 }
