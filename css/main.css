@@ -712,6 +712,27 @@ header[rel=main] .btn[rel=subscribe] {
   text-decoration: underline;
   color: #4e5162;
 }
+.recent__gotoblog {
+  margin-top: 3vw;
+  text-align: center;
+}
+.recent__gotoblog a {
+  display: inline-block;
+  border: 0.052083vw solid #4e5162;
+  background: #ffffff;
+  height: 3vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-size: 1vw;
+  line-height: 3vw;
+  border-radius: 1.5vw;
+  color: #4e5162;
+  text-decoration: none;
+}
+.recent__gotoblog a:hover {
+  border-color: #737891;
+  color: #737891;
+}
 
 /* endregion */
 

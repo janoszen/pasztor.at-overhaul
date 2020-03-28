@@ -89,4 +89,26 @@
     }
 
   }
+
+  &__gotoblog {
+    margin-top:3vw;
+    text-align: center;
+    a {
+      display: inline-block;
+      border: $pixel solid $color-active;
+      background:#ffffff;
+      height:3vw;
+      padding-left:3vw;
+      padding-right:3vw;
+      font-size: 1vw;
+      line-height:3vw;
+      border-radius:1.5vw;
+      color:$color-active;
+      text-decoration: none;
+      &:hover {
+        border-color:$color-hover;
+        color:$color-hover;
+      }
+    }
+  }
 }
