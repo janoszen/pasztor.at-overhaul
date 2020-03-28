@@ -105,6 +105,8 @@
       border-radius:1.5vw;
       color:$color-active;
       text-decoration: none;
+      transition: color ease-in-out $animation-length,
+                  border-color ease-in-out $animation-length;
       &:hover {
         border-color:$color-hover;
         color:$color-hover;

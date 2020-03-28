@@ -728,6 +728,7 @@ header[rel=main] .btn[rel=subscribe] {
   border-radius: 1.5vw;
   color: #4e5162;
   text-decoration: none;
+  transition: color ease-in-out 233ms, border-color ease-in-out 233ms;
 }
 .recent__gotoblog a:hover {
   border-color: #737891;
