@@ -647,6 +647,23 @@ header[rel=main] .btn[rel=subscribe] {
   color: #737891;
 }
 
+.recent {
+  padding: 5vw 5vw;
+  background: #ffffff;
+}
+.recent h2 {
+  font-size: 4vw;
+  line-height: 4vw;
+  font-weight: 800;
+  margin-bottom: 3vw;
+}
+@media screen and (min-width: 1090px) {
+  .recent h2 {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+}
+
 /* endregion */
 
 /*# sourceMappingURL=main.css.map */
