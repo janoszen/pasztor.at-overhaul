@@ -670,9 +670,12 @@ header[rel=main] .btn[rel=subscribe] {
   }
 }
 .recent .post__list .post {
+  display: block;
   color: inherit;
   position: relative;
   text-decoration: none;
+  margin-bottom: 2.25vw;
+  border-bottom: 0.052083vw solid #cccccc;
 }
 @media screen and (min-width: 1090px) {
   .recent .post__list .post {
@@ -681,6 +684,9 @@ header[rel=main] .btn[rel=subscribe] {
     flex-basis: 32%;
     box-shadow: 0 0.0312498vw 0.0937494vw rgba(0, 0, 0, 0.12), 0 0.052083vw 0.104166vw rgba(0, 0, 0, 0.24);
     transition: all 233ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
   }
   .recent .post__list .post:hover {
     box-shadow: 0 0.4374972vw 0.8749944vw rgba(0, 0, 0, 0.25), 0 0.52083vw 0.52083vw rgba(0, 0, 0, 0.22);
@@ -698,10 +704,10 @@ header[rel=main] .btn[rel=subscribe] {
   font-weight: 800;
 }
 .recent .post__list .post .post__tags, .recent .post__list .post .post__title, .recent .post__list .post .post__excerpt, .recent .post__list .post .post__meta {
-  font-size: 1.5vw;
-  line-height: 2.25vw;
-  margin-top: 1.125vw;
-  margin-bottom: 1.125vw;
+  font-size: 3vw;
+  line-height: 4.5vw;
+  margin-top: 2.25vw;
+  margin-bottom: 2.25vw;
   padding-right: 1vw;
   padding-left: 1vw;
 }
@@ -714,15 +720,19 @@ header[rel=main] .btn[rel=subscribe] {
   }
 }
 .recent .post__list .post .post__meta {
-  font-size: 1vw;
+  font-size: 2vw;
 }
 @media screen and (min-width: 1090px) {
   .recent .post__list .post .post__meta {
     font-size: 0.8vw;
   }
 }
-.recent .post__list .post .post__pubdate::after {
+.recent .post__list .post .post__pubdate::after, .recent .post__list .post .post__readtime::after {
   content: " | ";
+}
+.recent .post__list .post .post__read {
+  text-decoration: underline;
+  color: #4e5162;
 }
 
 /* endregion */
