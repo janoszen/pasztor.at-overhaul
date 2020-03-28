@@ -654,7 +654,7 @@ header[rel=main] .btn[rel=subscribe] {
 .recent h2 {
   font-size: 4vw;
   line-height: 4vw;
-  font-weight: 800;
+  font-weight: normal;
   margin-bottom: 3vw;
 }
 @media screen and (min-width: 1090px) {
@@ -662,6 +662,67 @@ header[rel=main] .btn[rel=subscribe] {
     font-size: 3vw;
     line-height: 3vw;
   }
+}
+@media screen and (min-width: 1090px) {
+  .recent .post__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.recent .post__list .post {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+@media screen and (min-width: 1090px) {
+  .recent .post__list .post {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 32%;
+    box-shadow: 0 0.0312498vw 0.0937494vw rgba(0, 0, 0, 0.12), 0 0.052083vw 0.104166vw rgba(0, 0, 0, 0.24);
+    transition: all 233ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .recent .post__list .post:hover {
+    box-shadow: 0 0.4374972vw 0.8749944vw rgba(0, 0, 0, 0.25), 0 0.52083vw 0.52083vw rgba(0, 0, 0, 0.22);
+  }
+}
+.recent .post__list .post img {
+  width: 100%;
+}
+.recent .post__list .post .post__tags {
+  color: #4e5162;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.recent .post__list .post .post__title {
+  font-weight: 800;
+}
+.recent .post__list .post .post__tags, .recent .post__list .post .post__title, .recent .post__list .post .post__excerpt, .recent .post__list .post .post__meta {
+  font-size: 1.5vw;
+  line-height: 2.25vw;
+  margin-top: 1.125vw;
+  margin-bottom: 1.125vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+}
+@media screen and (min-width: 1090px) {
+  .recent .post__list .post .post__tags, .recent .post__list .post .post__title, .recent .post__list .post .post__excerpt, .recent .post__list .post .post__meta {
+    font-size: 1vw;
+    line-height: 1.5vw;
+    margin-top: 0.75vw;
+    margin-bottom: 0.75vw;
+  }
+}
+.recent .post__list .post .post__meta {
+  font-size: 1vw;
+}
+@media screen and (min-width: 1090px) {
+  .recent .post__list .post .post__meta {
+    font-size: 0.8vw;
+  }
+}
+.recent .post__list .post .post__pubdate::after {
+  content: " | ";
 }
 
 /* endregion */

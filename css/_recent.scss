@@ -1,3 +1,6 @@
+@import "variables";
+@import "shadow";
+
 .recent {
   padding: 5vw 5vw;
   background:#ffffff;
@@ -5,11 +8,73 @@
   h2 {
     font-size: 4vw;
     line-height: 4vw;
-    font-weight: $font-weight-headline;
+    font-weight:normal;
     margin-bottom:3vw;
     @media screen and (min-width: $mobile-break){
       font-size: 3vw;
       line-height: 3vw;
     }
+  }
+
+  .post__list {
+    @media screen and (min-width: $mobile-break) {
+      display:flex;
+      justify-content: space-between;
+    }
+
+    .post {
+      color: inherit;
+      position: relative;
+      text-decoration: none;
+
+      @media screen and (min-width: $mobile-break) {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 32%;
+        @include elevation(1);
+      }
+
+      img {
+        width:100%;
+      }
+
+      .post__tags {
+        color:$color-active;
+        font-weight: $font-weight-headline;
+        text-transform: uppercase;
+      }
+
+      .post__title {
+        font-weight: $font-weight-headline;
+      }
+
+      .post__tags, .post__title, .post__excerpt, .post__meta {
+        font-size:1.5vw;
+        line-height:2.25vw;
+        margin-top:1.125vw;
+        margin-bottom:1.125vw;
+        padding-right: 1vw;
+        padding-left: 1vw;
+
+        @media screen and (min-width: $mobile-break){
+          font-size:1vw;
+          line-height:1.5vw;
+          margin-top: 0.75vw;
+          margin-bottom: 0.75vw;
+        }
+      }
+
+      .post__meta {
+        font-size: 1vw;
+        @media screen and (min-width: $mobile-break){
+          font-size:0.8vw;
+        }
+      }
+
+      .post__pubdate::after {
+        content: " | ";
+      }
+    }
+
   }
 }
