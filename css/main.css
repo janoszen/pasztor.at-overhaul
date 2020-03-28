@@ -481,31 +481,6 @@ header[rel=main] .btn[rel=subscribe] {
   opacity: 0.9;
   transition: opacity 250ms ease-in-out;
 }
-.hero__contact a span {
-  display: none;
-  position: absolute;
-  top: 6.5vw;
-  left: 2vw;
-  padding: 1vw 2vw;
-  height: 2vw;
-  line-height: 2vw;
-  border-radius: 2vw;
-  background: #000000;
-  color: #ffffff;
-  margin-left: -50%;
-  border: 1px solid #ffffff;
-  font-size: 1.5vw;
-  box-shadow: 0 0.0937494vw 0.1874988vw rgba(0, 0, 0, 0.16), 0 0.156249vw 0.312498vw rgba(0, 0, 0, 0.23);
-}
-@media screen and (min-width: 1090px) {
-  .hero__contact a span {
-    top: 3.5vw;
-    left: 0;
-  }
-}
-.hero__contact a:hover span {
-  display: block;
-}
 @media screen and (min-width: 1090px) {
   .hero__contact a {
     height: 3vw;
@@ -514,6 +489,9 @@ header[rel=main] .btn[rel=subscribe] {
 }
 .hero__contact a:hover {
   opacity: 1;
+}
+.hero__contact a span {
+  display: none;
 }
 .hero__contact a[rel=discord] {
   background-image: url("../img/discord-white.svg");

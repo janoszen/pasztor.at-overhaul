@@ -91,29 +91,6 @@
 
     a {
       position:relative;
-      span {
-        display:none;
-        position:absolute;
-        top: 6.5vw;
-        left:2vw;
-        padding: 1vw 2vw;
-        height:2vw;
-        line-height: 2vw;
-        border-radius:2vw;
-        background:#000000;
-        color:#ffffff;
-        margin-left:-50%;
-        border:1px solid #ffffff;
-        font-size:1.5vw;
-        @include elevation(2);
-        @media screen and (min-width: $mobile-break) {
-          top:3.5vw;
-          left:0;
-        }
-      }
-      &:hover span {
-        display:block;
-      }
 
       display:inline-block;
       height:6vw;
@@ -131,6 +108,9 @@
       transition: opacity 250ms ease-in-out;
       &:hover {
         opacity: 1;
+      }
+      span {
+        display:none;
       }
     }
     a[rel="discord"] {
