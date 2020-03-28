@@ -359,8 +359,18 @@ header[rel=main] .btn[rel=subscribe] {
     display: block;
   }
 }
+@media braille {
+  .speech {
+    display: block;
+  }
+}
 
 @media speech {
+  .no-speech {
+    display: none;
+  }
+}
+@media braille {
   .no-speech {
     display: none;
   }

@@ -13,11 +13,20 @@
                 <h1>
                     <a href="/">Janos Pasztor</a>
                 </h1>
+                <div class="speech">
+                    <h2>Table of Contents of this page</h2>
+                    <ul>
+                        <li><a href="#mainmenu">Main menu</a></li>
+                        <li><a href="#aboutme">About Me</a></li>
+                        <li><a href="#getnotified">Get Notified</a></li>
+                        <li><a href="#recent">Recent posts</a></li>
+                    </ul>
+                </div>
                 <label for="mobilemenutoggle" class="toaster__hamburger no-speech"><span>Open mobile menu</span></label>
                 <input type="checkbox" id="mobilemenutoggle" class="toaster__checkbox no-speech" />
                 <div class="mobile">
                     <nav rel="main">
-                        <h2 class="speech">Main menu</h2>
+                        <h2 class="speech" id="mainmenu">Main menu</h2>
                         <div class="speech">
                             <a href="#after-main-menu">Skip main menu</a>
                         </div>
@@ -43,7 +52,7 @@
             </header>
             <div class="hero">
                 <div class="hero__contents">
-                    <h2 class="speech">About me</h2>
+                    <h2 class="speech" id="aboutme">About me</h2>
                     <div class="speech">
                         <a href="#after-hero">Skip about me</a>
                     </div>
@@ -76,10 +85,13 @@
                 <div id="after-hero"></div>
             </div>
             <div class="signup">
-                <h2>
+                <h2 id="getnotified">
                     <span class="signup__line">Get notified. Stay tuned and be the first</span>
                     <span class="signup__line">to hear about new updates.</span>
                 </h2>
+                <div class="speech">
+                    <a href="#after-signup">Skip newsletter section</a>
+                </div>
                 <form action="/signup" method="post">
                     <label>
                         <span>What's your name?</span>
@@ -94,9 +106,13 @@
                 <div class="disclaimer">
                     No spam, just DevOps content. Read more about how your e-mail address is being handled in my <a href="/privacy">Privacy Policy</a>.
                 </div>
+                <div id="after-signup"></div>
             </div>
             <div class="recent">
-                <h2>Recent Posts</h2>
+                <h2 id="recent">Recent Posts</h2>
+                <div class="speech">
+                    <a href="#after-recent">Skip recent posts</a>
+                </div>
                 <div class="post__list" itemscope itemtype="http://schema.org/ItemList http://schema.org/BlogPosting">
                     <a class="post"
                        href="/blog/forwarding-ip-traffic-through-a-vpn"
@@ -185,6 +201,7 @@
                 <div class="recent__gotoblog">
                     <a href="/blog">Go to Blog</a>
                 </div>
+                <div id="after-recent"></div>
             </div>
         </div>
         <script> </script>

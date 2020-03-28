@@ -3,10 +3,16 @@
     @media speech {
         display: block;
     }
+    @media braille {
+        display: block;
+    }
 }
 
 .no-speech {
     @media speech {
+        display:none;
+    }
+    @media braille {
         display:none;
     }
 }
