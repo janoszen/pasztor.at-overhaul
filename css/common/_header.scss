@@ -2,6 +2,7 @@
 @import "shadow";
 
 header[rel="main"] {
+  background-color:#ffffff;
   opacity: 0;
   animation: fadein $animation-length-slow;
   animation-fill-mode: forwards;

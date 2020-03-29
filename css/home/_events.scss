@@ -1,6 +1,6 @@
 @import "../common/variables";
 @import "../common/shadow";
-@import "block";
+@import "../common/block";
 
 .events {
   @include block;
