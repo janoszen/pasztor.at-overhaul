@@ -7,13 +7,11 @@
   background-color:#f2f2f2;
 
   &__list {
-    @media screen and (min-width: $mobile-break) {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      flex-direction: row;
-    }
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
   }
 
   &__event {
@@ -26,11 +24,12 @@
     margin-bottom: 2vw;
     display:flex;
     flex-direction: row;
+    flex-basis:100%;
     @media screen and (min-width: $mobile-break) {
       flex-basis: 49%;
-      flex-grow: 0;
-      flex-shrink: 0;
     }
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 
   &__time, &__details {
@@ -45,10 +44,6 @@
     flex-basis: 33%;
     display:flex;
     flex-direction: column;
-  }
-
-  &__details {
-    flex: 1;
   }
 
   &__date {
@@ -67,7 +62,12 @@
 
   &__day {
     display: block;
-    font-size: 3vw;
+    font-size:6vw;
+    line-height:6vw;
+    @media screen and (min-width: $mobile-break) {
+      font-size: 3vw;
+      line-height:3vw;
+    }
     font-weight:$font-weight-headline;
     vertical-align: bottom;
   }
@@ -75,17 +75,30 @@
   &__monthyear {
     flex:1;
     display:block;
-    font-size:1vw;
+    font-size:2vw;
+    @media screen and (min-width: $mobile-break) {
+      font-size: 1vw;
+    }
   }
 
   &__hours {
     display: block;
     padding-top:1vw;
     padding-bottom:1vw;
+    font-size:2.4vw;
+    line-height:3.6vw;
+    @media screen and (min-width: $mobile-break) {
+      font-size: 1.2vw;
+      line-height: 1.8vw;
+    }
   }
 
   &__details {
-    padding:1.5vw;
+    padding: 3vw;
+    @media screen and (min-width: $mobile-break) {
+      padding: 1.5vw;
+    }
+    flex: 1;
     display: flex;
     flex-direction: column;
   }
@@ -93,32 +106,55 @@
   &__location {
     color: $color-active;
     text-transform: uppercase;
-    font-size:1vw;
+    font-size:2vw;
+    @media screen and (min-width: $mobile-break) {
+      font-size: 1vw;
+    }
     margin-bottom:1vw;
   }
 
   h3 {
-    font-size: 1.5vw;
-    line-height:1.5vw;
+    font-size: 3vw;
+    line-height: 3vw;
+    @media screen and (min-width: $mobile-break) {
+      font-size: 1.5vw;
+      line-height: 1.5vw;
+    }
     margin-bottom:1.5vw;
   }
 
   &__description {
     flex:1;
-    margin-bottom:1.5vw;
+    font-size: 2.4vw;
+    line-height: 3.6vw;
+    margin-bottom: 3vw;
+    @media screen and (min-width: $mobile-break) {
+      font-size: 1.2vw;
+      line-height: 1.8vw;
+      margin-bottom: 1.5vw;
+    }
   }
 
   &__tags {
-    height:1vw;
+    height: 2vw;
+    @media screen and (min-width: $mobile-break) {
+      height: 1vw;
+    }
   }
 
   &__tag {
     text-transform: uppercase;
-    height:1vw;
-    font-size:0.8vw;
-    line-height:0.8vw;
+    height: 2vw;
+    font-size: 1.6vw;
+    line-height: 1.6vw;
+    border-radius:1vw;
+    @media screen and (min-width: $mobile-break) {
+      height: 1vw;
+      font-size: 0.8vw;
+      line-height: 0.8vw;
+      border-radius:0.5vw;
+    }
     background-color:$color-alternate;
-    border-radius:0.5vw;
     display:inline-block;
     margin-right:1vw;
     padding-left:1vw;

@@ -72,6 +72,8 @@ input {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
+  font-size: 1.2vw;
+  line-height: 1.8vw;
 }
 
 @keyframes fadein {
@@ -161,7 +163,7 @@ header[rel=main] .toaster__checkbox:checked + .mobile {
 }
 header[rel=main] .toaster__hamburger {
   width: 50px;
-  background: url("../../img/hamburger.svg") no-repeat center;
+  background: url("../img/hamburger.svg") no-repeat center;
   background-size: 50%;
   cursor: pointer;
 }
@@ -851,14 +853,12 @@ header[rel=main] .btn[rel=subscribe] {
     line-height: 3vw;
   }
 }
-@media screen and (min-width: 1090px) {
-  .events__list {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-  }
+.events__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .events__event {
   box-shadow: 0 0.0312498vw 0.0937494vw rgba(0, 0, 0, 0.12), 0 0.052083vw 0.104166vw rgba(0, 0, 0, 0.24);
@@ -870,6 +870,9 @@ header[rel=main] .btn[rel=subscribe] {
   margin-bottom: 2vw;
   display: flex;
   flex-direction: row;
+  flex-basis: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 .events__event:hover {
   box-shadow: 0 0.4374972vw 0.8749944vw rgba(0, 0, 0, 0.25), 0 0.52083vw 0.52083vw rgba(0, 0, 0, 0.22);
@@ -877,8 +880,6 @@ header[rel=main] .btn[rel=subscribe] {
 @media screen and (min-width: 1090px) {
   .events__event {
     flex-basis: 49%;
-    flex-grow: 0;
-    flex-shrink: 0;
   }
 }
 .events__time, .events__details {
@@ -892,9 +893,6 @@ header[rel=main] .btn[rel=subscribe] {
   flex-basis: 33%;
   display: flex;
   flex-direction: column;
-}
-.events__details {
-  flex: 1;
 }
 .events__date {
   position: relative;
@@ -910,54 +908,113 @@ header[rel=main] .btn[rel=subscribe] {
 }
 .events__day {
   display: block;
-  font-size: 3vw;
+  font-size: 6vw;
+  line-height: 6vw;
   font-weight: 800;
   vertical-align: bottom;
+}
+@media screen and (min-width: 1090px) {
+  .events__day {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
 }
 .events__monthyear {
   flex: 1;
   display: block;
-  font-size: 1vw;
+  font-size: 2vw;
+}
+@media screen and (min-width: 1090px) {
+  .events__monthyear {
+    font-size: 1vw;
+  }
 }
 .events__hours {
   display: block;
   padding-top: 1vw;
   padding-bottom: 1vw;
+  font-size: 2.4vw;
+  line-height: 3.6vw;
+}
+@media screen and (min-width: 1090px) {
+  .events__hours {
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+  }
 }
 .events__details {
-  padding: 1.5vw;
+  padding: 3vw;
+  flex: 1;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 1090px) {
+  .events__details {
+    padding: 1.5vw;
+  }
 }
 .events__location {
   color: #4e5162;
   text-transform: uppercase;
-  font-size: 1vw;
+  font-size: 2vw;
   margin-bottom: 1vw;
 }
+@media screen and (min-width: 1090px) {
+  .events__location {
+    font-size: 1vw;
+  }
+}
 .events h3 {
-  font-size: 1.5vw;
-  line-height: 1.5vw;
+  font-size: 3vw;
+  line-height: 3vw;
   margin-bottom: 1.5vw;
+}
+@media screen and (min-width: 1090px) {
+  .events h3 {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+  }
 }
 .events__description {
   flex: 1;
-  margin-bottom: 1.5vw;
+  font-size: 2.4vw;
+  line-height: 3.6vw;
+  margin-bottom: 3vw;
+}
+@media screen and (min-width: 1090px) {
+  .events__description {
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+    margin-bottom: 1.5vw;
+  }
 }
 .events__tags {
-  height: 1vw;
+  height: 2vw;
+}
+@media screen and (min-width: 1090px) {
+  .events__tags {
+    height: 1vw;
+  }
 }
 .events__tag {
   text-transform: uppercase;
-  height: 1vw;
-  font-size: 0.8vw;
-  line-height: 0.8vw;
+  height: 2vw;
+  font-size: 1.6vw;
+  line-height: 1.6vw;
+  border-radius: 1vw;
   background-color: #0CD0A1;
-  border-radius: 0.5vw;
   display: inline-block;
   margin-right: 1vw;
   padding-left: 1vw;
   padding-right: 1vw;
+}
+@media screen and (min-width: 1090px) {
+  .events__tag {
+    height: 1vw;
+    font-size: 0.8vw;
+    line-height: 0.8vw;
+    border-radius: 0.5vw;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
