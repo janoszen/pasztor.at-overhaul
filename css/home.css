@@ -1001,6 +1001,7 @@ header[rel=main] .btn[rel=subscribe] {
   height: 2vw;
   font-size: 1.6vw;
   line-height: 1.6vw;
+  vertical-align: center;
   border-radius: 1vw;
   background-color: #0CD0A1;
   display: inline-block;
