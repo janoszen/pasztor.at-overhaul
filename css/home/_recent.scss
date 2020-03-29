@@ -1,25 +1,18 @@
-@import "variables";
-@import "shadow";
+@import "../common/variables";
+@import "../common/shadow";
+@import "block";
 
 .recent {
-  padding: 5vw 5vw;
+  @include block();
+
   background:#ffffff;
 
-  h2 {
-    font-size: 4vw;
-    line-height: 4vw;
-    font-weight:normal;
-    margin-bottom:3vw;
-    @media screen and (min-width: $mobile-break){
-      font-size: 3vw;
-      line-height: 3vw;
-    }
-  }
 
   .post__list {
     @media screen and (min-width: $mobile-break) {
       display:flex;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .post {
@@ -87,7 +80,6 @@
         color: $color-active;
       }
     }
-
   }
 
   &__gotoblog {
@@ -95,31 +87,15 @@
     text-align: center;
     a {
       display: inline-block;
-      border: $pixel solid $color-active;
-      background:#ffffff;
-
-      height:6vw;
-      padding-left:6vw;
-      padding-right:6vw;
-      font-size: 3vw;
-      line-height:6vw;
-      border-radius:3vw;
-      @media screen and (min-width: $mobile-break){
-        height:3vw;
-        padding-left:3vw;
-        padding-right:3vw;
-        font-size: 1vw;
-        line-height:3vw;
-        border-radius:1.5vw;
-      }
-      color:$color-active;
-      text-decoration: none;
-      transition: color ease-in-out $animation-length,
-                  border-color ease-in-out $animation-length;
-      &:hover {
-        border-color:$color-hover;
-        color:$color-hover;
-      }
+      @include button(
+        6vw,
+        3vw,
+        $pixel,
+        #ffffff,
+        $color-active,
+        #f2f2f2,
+        $color-hover
+      );
     }
   }
 }
