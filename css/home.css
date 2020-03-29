@@ -259,7 +259,7 @@ header[rel=main] form input[rel=search] {
   box-sizing: border-box;
   height: 35px;
   display: block;
-  background: url("../../img/magnifier.svg") no-repeat left center;
+  background: url("../img/magnifier.svg") no-repeat left center;
   background-size: 17.5px 17.5px;
   width: 100%;
   padding-left: 35px;
@@ -1001,7 +1001,6 @@ header[rel=main] .btn[rel=subscribe] {
   height: 2vw;
   font-size: 1.6vw;
   line-height: 1.6vw;
-  vertical-align: center;
   border-radius: 1vw;
   background-color: #0CD0A1;
   display: inline-block;
