@@ -426,12 +426,12 @@ footer[rel=main] h2 {
     margin-bottom: 2vw;
   }
 }
-footer[rel=main] main, footer[rel=main] aside {
+footer[rel=main] main, footer[rel=main] aside, footer[rel=main] h2 {
   font-size: 2.4vw;
   line-height: 3.6vw;
 }
 @media screen and (min-width: 1090px) {
-  footer[rel=main] main, footer[rel=main] aside {
+  footer[rel=main] main, footer[rel=main] aside, footer[rel=main] h2 {
     font-size: 1.2vw;
     line-height: 1.8vw;
   }

@@ -19,7 +19,7 @@ footer[rel="main"] {
     }
   }
 
-  main, aside {
+  main, aside, h2 {
     font-size:2.4vw;
     line-height:3.6vw;
     @media screen and (min-width: $mobile-break) {
